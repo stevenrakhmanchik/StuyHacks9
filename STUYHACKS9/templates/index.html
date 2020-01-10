@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Home | Bird Watch</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="{{ url_for('static',filename='new-style.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<style>
+
+ul {
+  list-style-type: none;
+  margin:0px;
+  padding-left: 20%;
+  padding-right: 20%;
+  overflow: hidden;
+  background-color: #FFF;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  font-size: 1 em;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #ff6666;
+}
+
+.active {
+  background-color: #66cccc;
+}
+.login {
+  float:right;
+}
+
+.fit {
+width: 100vw;
+ height: 100vh;
+ }
+
+
+
+ .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.top-left {
+  position: absolute;
+  top: 165px;
+  left: 100px;
+  font-size: 120px;
+  color: gold;
+    font-family: "Impact";
+
+}
+
+.top-right {
+  position: absolute;
+  top: 165px;
+  right: 50px;
+  font-size: 120px;
+  color: gold;
+  font-family: "Impact";
+
+}
+
+.scroll-down {
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation:    fade_move_down 4s ease-in-out infinite;
+	animation:         fade_move_down 4s ease-in-out infinite;
+}
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+.wrapper{
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+.wrapper a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+.wrapper a:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.wrapper a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
+
+
+
+</style>
+
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/login">Game</a></li>
+  <li><a href="/leaderboard">Leaderboard</a></li>
+  <li><a href="/map">Map</a></li>
+  <li><a href="/about">About</a></li>
+  <li class="login"><a href="/login">Log In</a></li>
+  <li class="login"><img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-512.png" height="43 px"></li>
+  
+</ul>
+
+            <!--<div id="myInputautocomplete-list" class="autocomplete-items" style="
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+-->
+
+<div class="container">
+ <img class="fit" src="https://besthqwallpapers.com/Uploads/15-6-2018/55825/4k-bald-eagle-close-up-predators-wildlife.jpg">
+  <div class="top-left">Bird</div>
+  <div class="top-right">Watch</div>
+</div>
+
+<div class="wrapper">
+  <div class="link_wrapper">
+    <a href="/login">Log in to play!</a>
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+        <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+      </svg>
+    </div>
+  </div>
+  
+</div>
+
+
+
+

@@ -1,0 +1,71 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>FairPrices</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="{{ url_for('static',filename='new-style.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<style>
+  ul {
+  list-style-type: none;
+  margin:0px;
+  padding-left: 20%;
+  padding-right: 20%;
+  overflow: hidden;
+  background-color: #FFF;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  font-size: 1 em;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #ff6666;
+}
+
+.active {
+  background-color: #66cccc;
+}
+.login {
+  float:right;
+}
+  </style>
+<ul class="navbar">
+  <li><a  href="/">Home</a></li>
+  <li><a class="active" href="/play">Game</a></li>
+  <li><a href="/leaderboard">Leaderboard</a></li>
+  <li><a href="/Map">Map</a></li>
+  <li><a href="/about">About</a></li>
+  <li class="login"><a href="/login">Log In</a></li>
+  <li class="login"><img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-512.png" height="43 px"></li>
+  
+</ul>
+
+<br>
+<center>
+  <h1>
+    Hello {{user}}
+  </h1>
+  <form action="/login" method="POST"action="/input">
+<input type="file" name="name" accept="image/*" >
+<br>
+  <input value="1" name="submit" type="submit">
+  </form>
+  
+
+</body>

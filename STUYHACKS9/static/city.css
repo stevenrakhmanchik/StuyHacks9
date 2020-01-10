@@ -1,0 +1,15 @@
+.product {
+  background-color: #67ea72;
+  border-radius: .5em;
+  padding: .5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.average-price {
+	height: auto;
+	padding: 10px;
+	border-radius: 4px;
+	transition: 0.3s ease-in-out;
+	margin-top: 10px;
+}

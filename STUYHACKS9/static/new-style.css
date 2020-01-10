@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+  z-index: -1;
+}
+i{
+	color: white;
+}
+#addPrice{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: rgb(0, 140, 255);
+	color: white;
+	border: none;
+	outline: none;
+	text-align: center;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	font-size: 15px;
+	transition: 0.3s ease-in-out;
+}
+
+#addPrice:hover, #addPrice:focus{
+	border: none;
+	outline: none;
+	transform: scale(0.95);
+}
+#priceList{
+	position: absolute;
+	width: 80%;
+	height: auto; /*auto */
+	margin: auto;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: rgba(255, 255, 255, 0.7);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 20px;
+	border-radius: 4px;
+}
+.price {
+	height: auto;
+	padding: 10px;
+	color: white;
+	border-radius: 4px;
+	transition: 0.3s ease-in-out;
+	margin-top: 10px;
+}
+.bad{
+	background-color: rgb(255,100,100);
+	opacity: 0.8;
+}
+.good{
+	background-color: rgb(100, 200, 108);
+	opacity: 0.8;
+}
+
+.price:hover{
+	/*background-color: rgb(100, 200, 108);*/
+	opacity: 1;
+	transform: scale(0.98);
+}
+
+#priceWindow{
+	width: 300px;
+	height: auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 3px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+#priceWindow h1{
+	margin-left: 10px;
+}
+span{
+	color: red;
+	float: right;
+	font-size: 25px;
+}
+span:hover, span:focus{
+	opacity: 0.8;
+	cursor: pointer;
+}
+.addPrice{
+	width: calc(100% - 20px);
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 7px;
+	height: 30px;
+	border-radius: 3px;
+	border: 1px solid black;
+	background-color: white;
+	outline: none;
+}
+#submit{
+	width: calc(100% + 2px);
+	height: 32px;
+	font-weight: bold;
+	border: 1px solid black;
+	transition: 0.3s ease-in-out;
+}
+#submit:hover, #sumbit:focus{
+	transform: scale(0.97);
+	background-color: black;
+	color: white;
+	outline: none;
+	border: 1px solid black;
+}
+.addPrice::placeholder {
+	font-weight: bold;
+	color: black;
+}
+
+@media screen and (max-width: 650px) {
+	#addPrice{
+		height: 60px;
+		width: 60px;
+	}
+}
+/*
+#navbar-h2 {
+    display: flex;
+}
+
+.navbar-h2, h2 { 
+  margin: 0px 0px 0px 0px;// its not overriding the <h2> margin
+}
+*/
+.nav-button {
+  background-color: green;
+  z-index: 1;
+  width: 40px;
+  height: 20px;
+}
+/* autofill */
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  margin-right:20%;
+  padding: 1%;
+  font-size: .5%;
+}
+input[type=text].style {
+  background-color: #f1f1f1;
+  width: 60%;
+  font-size: 1%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  font-size: 10px;
+}
+.autocomplete-items { /* the items in the dropdown */
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  background-color: #f1f1f1;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+#autocomplete-list {
+  font-size: 2px;
+}
+
+.nav-button {
+    background: #3d3d3d;
+    height: 30px;
+    width: 80px;
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    float: right;
+}
+
+#navbar {
+    padding: none;
+    width: 100%;
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    background-color: #ffff;
+    color: darkolivegreen;
+}
+
+#logo {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+#myInput {
+    font-size: 14px;
+    padding: 4px;
+    width: 60%;
+    border: none;
+}
+

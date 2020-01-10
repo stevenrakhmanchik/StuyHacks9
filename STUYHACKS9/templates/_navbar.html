@@ -1,0 +1,51 @@
+
+  <!-- NAVBAR -->
+<style>
+
+  .navbar {
+  list-style-type: none;
+  margin:0px;
+  padding-left: 20%;
+  padding-right: 20%;
+  overflow: hidden;
+  background-color: #FFF;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navbar li{
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  font-size: 1 em;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.navbar li a:hover {
+  background-color: #ff6666;
+}
+
+.navbar .active {
+  background-color: #66cccc;
+}
+.navbar .login {
+  float:right;
+}
+  </style>
+<ul class="navbar">
+  <li><a href="/">Home</a></li>
+  <li><a class="active" href="/login">Game</a></li>
+  <li><a href="/leaderboard">Leaderboard</a></li>
+  <li><a href="/map">Map</a></li>
+  <li><a href="/about">About</a></li>
+  <li class="login"><a href="/login">Log In</a></li>
+  <li class="login"><img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-512.png" height="43 px"></li>
+  
+</ul>

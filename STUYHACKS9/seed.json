@@ -1,0 +1,56 @@
+{
+    "products": [
+        {
+            "name": "a name",
+            "ucd": 12341234,
+            "prices": [
+                {
+                    "price": 123,
+                    "location": [
+                        40.6102,
+                        -73.9193
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "toilet",
+            "ucd": 1234123412,
+            "prices": [
+                {
+                    "price": 1263,
+                    "location": [
+                        34.0494,
+                        -118.2307
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "bread",
+            "ucd": 1233412354,
+            "prices": [
+                {
+                    "price": 1243,
+                    "location": [
+                        48.8927,
+                        2.3403
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a name",
+            "ucd": 12341234,
+            "prices": [
+                {
+                    "price": 123,
+                    "location": [
+                        40.6102,
+                        -73.9193
+                    ]
+                }
+            ]
+        }
+    ],
+}

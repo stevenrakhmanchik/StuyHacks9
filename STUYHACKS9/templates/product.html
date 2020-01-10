@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FairPrices</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="{{ url_for('static',filename='new-style.css') }}" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+
+    <style>
+    </style>
+
+     <div id = "navbar" style="background: #ffff; border-left: 10%; border-top:10%; padding-top: 4px">
+
+  <table>
+        <tr>
+          <b id="logo" onclick="location.href = 'https://fairprices.petevdp.repl.co'">FairPrices &nbsp;&nbsp;&nbsp;</b>
+            <form autocomplete="off" action="/cities/{{title1}}" method="POST">
+              <div class="autocomplete" style="width:300px; display: inline;">
+                <input id="myInput" type ="text" name="UPC" placeholder = "Search Local Produce Prices..." style = "font-size: 14px; width: 100%; padding: 4px;">
+                
+              </div>
+              <input type="submit">
+          </form>
+        </tr>
+         
+  </table>
+                
+    </div>   
+            <!--<div id="myInputautocomplete-list" class="autocomplete-items" style="
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+-->
+  
+	<div id="priceList">
+		<div class="good price">
+			<h3 class="text"> {{title1}} </h3>
+			<p class="description">Description: {{description1}} </p>
+		</div>
+		<div class="bad price">
+			<h3 class="text">{{title2}}</h3>
+			<p class="description"> {{description2}} </p> <!-- to get the estimate of the value of a good you must first add a new one, so that we are all sharing in the benifits and putting in the effort -->
+		</div>
+	</div>
+	
+  {%if toinput != None%}
+	<div id="priceWindow" style="display: none;">
+		<span id="closePrice">X</span>
+		<h1>Add Price</h1>
+    <form action="/upload" method="POST">
+		<input class="addPrice" id="price" name = "item" type="text" autocomplete="off" placeholder="Enter a Item"/><br>
+		<input class="addPrice" id="cost" name = "price" type="text" autocomplete="off" placeholder="Enter a Price ($)"/>
+		<input type="submit" class="addPrice" value="Submit" id="submit">Submit</button>
+	</div>
+	<button id="addPrice"><i class="fa fa-plus"></i></button>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+
+  {% endif %}
+<script src="{{url_for('static', filename='items.js')}}"></script>
+<script src="{{url_for('static', filename='autocomplete.js')}}"></script>
+</body>
+</html>
+
+
+
+<script>var countries = [{{citiesExist}}]</script>
+
+
+  {%if toinput != None%}
+	<div id="priceWindow" style="display: none;">
+		<span id="closePrice">X</span>
+		<h1>Add Price</h1>
+    <form action="/upload" method="POST">
+		<input class="addPrice" id="price" name = "item" type="text" autocomplete="off" placeholder="Enter a Item"/><br>
+		<input class="addPrice" id="cost" name = "price" type="text" autocomplete="off" placeholder="Enter a Price ($)"/>
+		<input type="submit" class="addPrice" value="Submit" id="submit">Submit</button>
+	</div>
+	<button id="addPrice"><i class="fa fa-plus"></i></button>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <script src="{{url_for('static', filename='cities.js')}}"></script>
+
+  {% endif %}
